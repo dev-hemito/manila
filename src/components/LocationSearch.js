@@ -63,7 +63,7 @@ const LocationSearch = () => {
       <div className="flex flex-col flex-1 min-w-[200px]">
         <label className="text-sm text-gray-600 mb-1">Pick-up date</label>
         <div className="relative">
-          <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <Calendar className=" hidden md:block absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
             type="date"
             name="pickupDate"
@@ -96,7 +96,7 @@ const LocationSearch = () => {
       <div className="flex flex-col flex-1 min-w-[200px]">
         <label className="text-sm text-gray-600 mb-1">Drop-off date</label>
         <div className="relative">
-          <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <Calendar className=" hidden md:block absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
             type="date"
             name="dropoffDate"
