@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const CarCard = ({ car }) => (
   <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
@@ -42,9 +43,9 @@ const CarCard = ({ car }) => (
           <span className="text-sm text-gray-500">{car.type}</span>
         </div>
       </div>
-      <button className="w-full py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+      <a href='https://wa.me/+917994857990' className="w-full p-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
         Rent Now
-      </button>
+      </a>
     </div>
   </div>
 );
@@ -105,7 +106,7 @@ const CarCollection = () => {
       name: 'Hiance Super Grandia',
       color:'white and black',
       price: '78.90',
-      image: '/cars/p.jpg',
+      image: '/cars/hiace.jpg',
       mileage: '25',
       transmission: 'Automatic',
       passengers: '4 Person',

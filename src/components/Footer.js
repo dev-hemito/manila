@@ -6,9 +6,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-300 w-full py-8 relative overflow-hidden">
-      {/* Decorative gradient orbs */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-5 animate-pulse delay-700"></div>
+
 
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
