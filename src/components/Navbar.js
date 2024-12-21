@@ -6,29 +6,38 @@ import Image from 'next/image';
 
 const navLinks = [
   { title: 'Home', href: '/' },
-  { title: 'About', href: '/about' },
-  { title: 'Vehicles', href: '/vehicles' },
-  { title: 'Contact', href: '/contact' },
+  { title: 'About', href: '/#about' },
+  { title: 'Vehicles', href: '/#vehicles' },
+  { title: 'Services', href: '/#services' },
 ];
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
+
+    const handleScroll = () => {
+      // Calculate scroll percentage
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      setHasScrolled(scrollPercent >= 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className="fixed w-full z-50 mx-auto max-w-7xl left-0 right-0 mt-5 ">
-      {/* Loading Animation */}
-
-
+    <header className={`fixed w-full z-50 mx-auto max-w-7xl left-0 right-0 mt-3 transition-colors duration-300 rounded-lg pt-3 ${
+      hasScrolled ? 'bg-black' : 'bg-transparent'
+    }`}>
       {/* Main Navbar */}
       <nav className={`transform transition-all duration-1000 ${
         isLoaded ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
       }`}>
-        <div className=' px-3 py-2'>
+        <div className='px-3 py-2'>
           <div className='grid grid-cols-3'>
             {/* Menu Button */}
             <div className='flex justify-start items-center'>
@@ -38,14 +47,14 @@ export const Navbar = () => {
                 aria-expanded={isMenuOpen}
                 aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X /> :  <Image
-                                    src='/menu.png'
-                                    width={500}
-                                    height={500}
-                                    className='w-10 h-auto'
-                                    alt='logo'
-                                    priority
-                                />}
+                {isMenuOpen ? <X /> : <Image
+                  src='/menu.png'
+                  width={500}
+                  height={500}
+                  className='w-10 h-auto'
+                  alt='logo'
+                  priority
+                />}
               </button>
             </div>
 
@@ -66,10 +75,10 @@ export const Navbar = () => {
             {/* Book Now Button */}
             <div className='flex justify-end items-center'>
               <Link
-                href='/book'
+                href='https://wa.me/+917994857990'
                 className='py-2 px-4 md:border border-white text-white rounded-full hover:scale-105 
                           flex justify-center items-center 
-                          transition-all duration-300 ease-in-out transform '
+                          transition-all duration-300 ease-in-out transform'
               >
                 Book Now
               </Link>
@@ -79,8 +88,9 @@ export const Navbar = () => {
 
         {/* Dropdown Menu */}
         <div 
-          className={`bg-black/20 backdrop-blur-md transition-all duration-300 ease-in-out
-                     overflow-hidden ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}
+          className={`backdrop-blur-md transition-all duration-300 ease-in-out
+                     overflow-hidden ${isMenuOpen ? 'max-h-96' : 'max-h-0'}
+                     ${hasScrolled ? 'bg-black/20' : 'bg-black/20'}`}
         >
           {/* Desktop Menu (Horizontal) */}
           <div className='hidden lg:flex justify-center py-4 gap-8'>
@@ -88,7 +98,9 @@ export const Navbar = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`text-white  transition-all duration-300 md:text-lg   transform hover:scale-105 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 '}`}
+                className={`text-white transition-all duration-300 md:text-lg transform hover:scale-105 ${
+                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {link.title}
@@ -103,7 +115,9 @@ export const Navbar = () => {
                 key={link.title}
                 href={link.href}
                 className={`text-white hover:text-[#D99029] transition-all duration-300
-                          transform hover:scale-105 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+                          transform hover:scale-105 ${
+                            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                          }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {link.title}

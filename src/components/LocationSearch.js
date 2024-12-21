@@ -41,7 +41,7 @@ const LocationSearch = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative -top-10 flex flex-wrap gap-4 items-center p-4 bg-white/90 backdrop-blur-lg z-10 rounded-lg mx-auto max-w-7xl">
+    <form onSubmit={handleSubmit} className="relative -top-10 flex flex-wrap gap-4 items-center p-4 bg-gray-200 backdrop-blur-lg z-10 rounded-lg mx-auto max-w-7xl">
       {/* Pick-up Location */}
       <div className="flex flex-col flex-1 min-w-[200px]">
         <label className="text-sm text-gray-600 mb-1">Pick-up Location</label>
