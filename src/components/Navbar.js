@@ -30,7 +30,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 mx-auto max-w-7xl left-0 right-0 mt-3 transition-colors duration-300 rounded-lg pt-3 ${
+    <header className={`fixed w-full z-50 mx-auto max-w-7xl left-0 right-0 mt-3 transition-colors duration-300 rounded-lg pt-2 pb-2 ${
       hasScrolled ? 'bg-black' : 'bg-transparent'
     }`}>
       {/* Main Navbar */}
