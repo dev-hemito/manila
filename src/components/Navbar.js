@@ -56,7 +56,7 @@ export const Navbar = () => {
                   src='/logo.png'
                   width={500}
                   height={500}
-                  className='md:h-7 w-auto h-auto'
+                  className='md:h-12 w-auto h-auto'
                   alt='logo'
                   priority
                 />
@@ -79,7 +79,7 @@ export const Navbar = () => {
 
         {/* Dropdown Menu */}
         <div 
-          className={`bg-[#1D0802]/90 backdrop-blur-md transition-all duration-300 ease-in-out
+          className={`bg-black/20 backdrop-blur-md transition-all duration-300 ease-in-out
                      overflow-hidden ${isMenuOpen ? 'max-h-96' : 'max-h-0'}`}
         >
           {/* Desktop Menu (Horizontal) */}
@@ -88,8 +88,7 @@ export const Navbar = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`text-white hover:text-[#D99029] transition-all duration-300
-                          transform hover:scale-105 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+                className={`text-white  transition-all duration-300 md:text-lg   transform hover:scale-105 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 '}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {link.title}
