@@ -51,7 +51,7 @@ export const Navbar = () => {
 
             {/* Logo */}
             <div className='flex justify-center items-center'>
-              <Link href='/' className='transform hover:scale-105 transition-transform duration-200'>
+              <Link href='/' className='transform transition-transform duration-200'>
                 <Image
                   src='/logo.png'
                   width={500}
@@ -67,7 +67,7 @@ export const Navbar = () => {
             <div className='flex justify-end items-center'>
               <Link
                 href='/book'
-                className='py-2 px-4 md:border border-white text-white rounded-full
+                className='py-2 px-4 md:border border-white text-white rounded-full hover:scale-105 
                           flex justify-center items-center 
                           transition-all duration-300 ease-in-out transform '
               >
