@@ -55,7 +55,7 @@ const CarCollection = () => {
     {
       name: 'Land Cruiser',
       color:'black',
-      price: '78.90',
+      price: '4000',
       image: '/cars/landcruiser.jpg',
       mileage: '25',
       transmission: 'Automatic',
@@ -65,7 +65,7 @@ const CarCollection = () => {
     {
       name: 'Dodge Challenger',
       color:'green',
-      price: '78.90',
+      price: '3000',
       image: '/cars/dodgegreen.jpg',
       mileage: '25',
       transmission: 'Automatic',
@@ -75,7 +75,7 @@ const CarCollection = () => {
     {
       name: 'Toyota Alphard',
       color:'black and white',
-      price: '78.90',
+      price: '2000',
       image: '/cars/aphard.jpg',
       mileage: '25',
       transmission: 'Automatic',
@@ -105,7 +105,7 @@ const CarCollection = () => {
     {
       name: 'Hiance Super Grandia',
       color:'white and black',
-      price: '78.90',
+      price: '800',
       image: '/cars/hiace.jpg',
       mileage: '25',
       transmission: 'Automatic',
