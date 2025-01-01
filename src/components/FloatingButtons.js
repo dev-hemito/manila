@@ -48,7 +48,7 @@ const FloatingButtons = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`p-4 rounded-full shadow-lg text-white transition-all duration-300 transform
-          ${isOpen ? 'bg-red-500 hover:bg-red-600 rotate-45' : 'bg-gray-700 hover:bg-gray-800'}
+          ${isOpen ?  'bg-gray-700 hover:bg-gray-800' : 'bg-red-500 hover:bg-red-600 rotate-45' }
           hover:scale-105`}
       >
         <X className="w-6 h-6" />
