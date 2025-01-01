@@ -19,7 +19,7 @@ export const metadata = {
     site_name: "Manila Rent a Car",
     images: [
       {
-        url: "https://manilarentcars.com/logo.png",  // Update with the URL of your Open Graph image
+        url: "https://manilarentcars.com/logo-black.png",  // Update with the URL of your Open Graph image
         width: 1200,
         height: 630,
         alt: "Manila Rent a Car",
