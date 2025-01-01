@@ -31,7 +31,7 @@ const LocationSearch = () => {
     `.trim();
 
     // Replace PHONE_NUMBER with your desired WhatsApp number (with country code, no spaces or symbols)
-    const phoneNumber = '+919622944590'
+    const phoneNumber = '+639622944590'
     
     // Create WhatsApp URL with encoded message
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
