@@ -10,19 +10,19 @@ const FloatingButtons = () => {
       icon: <MessageCircle className="w-5 h-5" />,
       label: 'WhatsApp',
       color: 'bg-green-500 hover:bg-green-600',
-      link: 'https://wa.me/+919622944590'
+      link: 'https://wa.me/+639622944590'
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: 'Call',
       color: 'bg-blue-500 hover:bg-blue-600',
-      link: 'tel:+919622944590'
+      link: 'tel:+639622944590'
     },
     {
       icon: <MessageCircle className="w-5 h-5" />,
       label: 'Viber',
       color: 'bg-purple-500 hover:bg-purple-600',
-      link: 'viber://chat?number=+919622944590'
+      link: 'viber://chat?number=+639622944590'
     }
   ];
 
