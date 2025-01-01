@@ -15,7 +15,7 @@ const CarCard = ({ car }) => (
     <div className="p-4">
       <h3 className="font-semibold text-lg mb-2 flex justify-between">{car.name} {car.color?<><span className='bg-gray-200 py-1 px-3 rounded-full text-sm'>{car.color}</span></>: ''} </h3>
       <div className="flex justify-between items-center mb-4">
-        <span className="text-2xl font-bold">${car.price}<span className="text-sm text-gray-500">/day</span></span>
+        <span className="text-2xl font-bold">₱{car.price}<span className="text-sm text-gray-500">/day</span></span>
       </div>
       <div className="flex justify-between mb-4">
         <div className="flex items-center gap-1">
@@ -85,7 +85,7 @@ const CarCollection = () => {
     {
       name: 'Montero Sport',
       color:'white',
-      price: '78.90',
+      price: '2000',
       image: '/cars/montero.jpg',
       mileage: '25',
       transmission: 'Automatic',
@@ -95,7 +95,7 @@ const CarCollection = () => {
     {
       name: 'Mustang GT',
       color:'',
-      price: '78.90',
+      price: '3000',
       image: '/cars/mustang.jpg',
       mileage: '25',
       transmission: 'Automatic',
