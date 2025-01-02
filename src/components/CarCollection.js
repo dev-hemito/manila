@@ -86,7 +86,7 @@ const CarCollection = () => {
       name: 'Montero Sport',
       color:'white',
       price: '2000',
-      image: '/cars/montero.jpg',
+      image: '/cars/montero.png',
       mileage: '25',
       transmission: 'Automatic',
       passengers: '4 Person',
