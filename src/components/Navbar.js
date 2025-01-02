@@ -30,13 +30,11 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 mx-auto max-w-7xl left-0 right-0 mt-3 transition-colors duration-300 rounded-lg pt-2 pb-2 ${
-      hasScrolled ? 'bg-black' : 'bg-transparent'
-    }`}>
-      {/* Main Navbar */}
-      <nav className={`transform transition-all duration-1000 ${
-        isLoaded ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
+    <header className={`fixed w-full z-50 mx-auto max-w-7xl left-0 right-0 mt-3 transition-colors duration-300 rounded-lg pt-2 pb-2 ${hasScrolled ? 'bg-black' : 'bg-transparent'
       }`}>
+      {/* Main Navbar */}
+      <nav className={`transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
+        }`}>
         <div className='px-3 py-2'>
           <div className='grid grid-cols-3'>
             {/* Menu Button */}
@@ -75,7 +73,7 @@ export const Navbar = () => {
             {/* Book Now Button */}
             <div className='flex justify-end items-center'>
               <Link
-                href='https://wa.me/+917994857990'
+                href='https://wa.me/+639622944590'
                 className='py-2 px-4 md:border border-white text-white rounded-full hover:scale-105 
                           flex justify-center items-center 
                           transition-all duration-300 ease-in-out transform'
@@ -87,7 +85,7 @@ export const Navbar = () => {
         </div>
 
         {/* Dropdown Menu */}
-        <div 
+        <div
           className={`backdrop-blur-md transition-all duration-300 ease-in-out
                      overflow-hidden ${isMenuOpen ? 'max-h-96' : 'max-h-0'}
                      ${hasScrolled ? 'bg-black/20' : 'bg-black/20'}`}
@@ -98,9 +96,8 @@ export const Navbar = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`text-white transition-all duration-300 md:text-lg transform hover:scale-105 ${
-                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                }`}
+                className={`text-white transition-all duration-300 md:text-lg transform hover:scale-105 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {link.title}
@@ -115,9 +112,8 @@ export const Navbar = () => {
                 key={link.title}
                 href={link.href}
                 className={`text-white hover:text-[#D99029] transition-all duration-300
-                          transform hover:scale-105 ${
-                            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                          }`}
+                          transform hover:scale-105 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {link.title}

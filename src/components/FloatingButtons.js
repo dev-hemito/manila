@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Phone, MessageCircle, X } from 'lucide-react';
 
 const FloatingButtons = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const buttons = [
     {
@@ -27,7 +27,7 @@ const FloatingButtons = () => {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col items-end space-y-4">
+    <div className="fixed bottom-6 right-6 flex flex-col items-end space-y-4 z-50">
       {/* Main buttons container */}
       <div className={`flex flex-col-reverse items-end space-y-reverse space-y-3 transition-all duration-300 ease-in-out
         ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
@@ -45,14 +45,7 @@ const FloatingButtons = () => {
       </div>
 
       {/* Toggle button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`p-4 rounded-full shadow-lg text-white transition-all duration-300 transform
-          ${isOpen ?  'bg-gray-700 hover:bg-gray-800' : 'bg-red-500 hover:bg-red-600 rotate-45' }
-          hover:scale-105`}
-      >
-        <X className="w-6 h-6" />
-      </button>
+     
     </div>
   );
 };
