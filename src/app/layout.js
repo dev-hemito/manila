@@ -1,12 +1,12 @@
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   variable: "--font-montserrat-sans",
   subsets: ["latin"],
+  weight: ["400", "700"], // Add the weights you need (for example, regular and bold)
 });
-
 export const metadata = {
   title: "Manila Rent a Car",
   description: "Get your luxurious ride with Manila Rent a Car, offering high-end vehicles for all your travel needs.",
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         
         <title>{metadata.title}</title>
       </head>
-      <body className={`${montserrat.variable} bg-white`}>
+      <body className={`${poppins.variable} bg-white`}>
         <Navbar />
         {children}
       </body>
