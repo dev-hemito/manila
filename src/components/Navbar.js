@@ -73,7 +73,7 @@ export const Navbar = () => {
             {/* Book Now Button */}
             <div className='flex justify-end items-center'>
               <Link
-                href='https://wa.me/+639622944590'
+                href='https://wa.me/+639951582171'
                 className='py-2 px-4 md:border border-white text-white rounded-full hover:scale-105 
                           flex justify-center gap-1 items-center 
                           transition-all duration-300 ease-in-out transform'
